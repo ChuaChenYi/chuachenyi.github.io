@@ -25,11 +25,18 @@ stlite.mount(
 "streamlit_app.py": `import streamlit as st
 import time
 
+# Webpage Setup
 st.set_option("client.showSidebarNavigation", False)
 st.set_page_config(page_title="Home")
 
-st.title("Main Page")
+# Sidebar Setup
+st.sidebar.page_link('streamlit_app.py', label='**Home**')
+st.sidebar.page_link('pages/page1.py', label='**Resume**') #TODO
+st.sidebar.write("### Personal Projects")
 st.sidebar.page_link('pages/page1.py', label='Link To Page 1')
+
+# Webpage Content Start
+st.title("Hello!")
 
 # Write Stream Test
 LOREM_IPSUM = """
@@ -43,9 +50,7 @@ def stream_data(text):
         yield word + " "
         time.sleep(0.05)
 
-st.write_stream(stream_data(LOREM_IPSUM))
-
-`,
+st.write_stream(stream_data(LOREM_IPSUM))`,
 "pages/page1.py": `import streamlit as st
 
 st.set_option("client.showSidebarNavigation", False)
