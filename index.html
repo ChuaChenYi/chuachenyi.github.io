@@ -26,18 +26,21 @@ stlite.mount(
 import time
 
 DELAY = 0.35
+SHORT = 0.15
+
+# Landing page with animations. Runs once only
 
 # Webpage Setup
 st.set_option("client.showSidebarNavigation", False)
-st.set_page_config(page_title="Home")
+st.set_page_config(page_title="ChenYi")
 
 # Sidebar Setup
 st.sidebar.caption("### Navigation")
-st.sidebar.page_link('streamlit_app.py', label='**Home**')
-st.sidebar.page_link('pages/page1.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### Personal Projects")
-st.sidebar.page_link('pages/page1.py', label='Link To Page 1')
+st.sidebar.page_link('pages/resume.py', label='Placeholder')
 
 MESSAGE = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -71,25 +74,65 @@ time.sleep(DELAY)
 st.write_stream(stream_letters("\\\\- ChenYi", 0.05))
 
 # Links
-st.write("# ")
+st.write("### ")
 time.sleep(DELAY)
-st.caption("#### Quick Links")
-time.sleep(DELAY)
-st.page_link("pages/page1.py", label='**Resume**', icon=':material/description:')
-time.sleep(DELAY)
-st.page_link("pages/page1.py", label='**Personal Projects**', icon=':material/construction:')
-time.sleep(DELAY)
+st.caption("### Quick Links")
+time.sleep(SHORT)
+st.page_link("pages/resume.py", label='**Resume**', icon=':material/description:')
+time.sleep(SHORT)
+st.page_link("pages/resume.py", label='**Personal Projects**', icon=':material/construction:')
+time.sleep(SHORT)
 st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
-"pages/page1.py": `import streamlit as st
-
-st.set_option("client.showSidebarNavigation", False)
-st.set_page_config(page_title="Page 1")
-
-st.title("This is page 1")
-st.sidebar.page_link('streamlit_app.py', label='Custom Link To Home')`,
 "pages/contact.py": `import streamlit as st
 
 st.header("Contact")`,
+"pages/home.py": `import streamlit as st
+import time
+
+# Homepage with all animations removed
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="ChenYi")
+
+# Sidebar Setup
+st.sidebar.caption("### Navigation")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### Personal Projects")
+st.sidebar.page_link('pages/resume.py', label='Placeholder')
+
+MESSAGE = """
+Nice to see you here! Within this site, you'll find what I've been up to since 2015.
+Its primarily just a convenient way to showcase some work and school related stuff, plus a couple of side projects.
+Thanks for stopping by!
+"""
+
+# Webpage Content Start
+st.write("# **HELLO!**")
+st.write(MESSAGE)
+st.write("\\\\- ChenYi")
+
+# Links
+st.write("### ")
+st.caption("### Quick Links")
+st.page_link("pages/resume.py", label='**Resume**', icon=':material/description:')
+st.page_link("pages/resume.py", label='**Personal Projects**', icon=':material/construction:')
+st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
+"pages/resume.py": `import streamlit as st
+
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Resume")
+
+# Sidebar Setup
+st.sidebar.caption("### Navigation")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### Personal Projects")
+st.sidebar.page_link('pages/resume.py', label='Placeholder')
+
+
+st.title("This is resume")`,
 
 },
   },
