@@ -32,7 +32,7 @@ SHORT = 0.15
 
 # Webpage Setup
 st.set_option("client.showSidebarNavigation", False)
-st.set_page_config(page_title="ChenYi")
+st.set_page_config(page_title="ChenYi", initial_sidebar_state="collapsed")
 
 # Sidebar Setup
 st.sidebar.caption("### :blue[Navigation]")
@@ -91,7 +91,7 @@ import time
 
 # Homepage with all animations removed
 st.set_option("client.showSidebarNavigation", False)
-st.set_page_config(page_title="ChenYi")
+st.set_page_config(page_title="ChenYi", initial_sidebar_state="collapsed")
 
 # Sidebar Setup
 st.sidebar.caption("### :blue[Navigation]")
@@ -121,7 +121,7 @@ st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/resume.py": `import streamlit as st
 
 st.set_option("client.showSidebarNavigation", False)
-st.set_page_config(page_title="Resume")
+st.set_page_config(page_title="Resume", initial_sidebar_state="collapsed")
 
 # Sidebar Setup
 st.sidebar.caption("### :blue[Navigation]")
