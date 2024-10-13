@@ -30,9 +30,10 @@ st.set_option("client.showSidebarNavigation", False)
 st.set_page_config(page_title="Home")
 
 # Sidebar Setup
+st.sidebar.caption("### Navigation")
 st.sidebar.page_link('streamlit_app.py', label='**Home**')
 st.sidebar.page_link('pages/page1.py', label='**Resume**') #TODO
-st.sidebar.write("### Personal Projects")
+st.sidebar.caption("### Personal Projects")
 st.sidebar.page_link('pages/page1.py', label='Link To Page 1')
 
 # Webpage Content Start
@@ -48,9 +49,15 @@ nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 def stream_data(text):
     for word in text.split(" "):
         yield word + " "
-        time.sleep(0.05)
+        time.sleep(0.03)
 
-st.write_stream(stream_data(LOREM_IPSUM))`,
+st.write_stream(stream_data(LOREM_IPSUM))
+
+# Links
+st.write("#### ")
+st.caption("#### Quick Links")
+st.page_link("pages/page1.py", label='**Resume**', icon=':material/description:')
+st.page_link("pages/page1.py", label='**Personal Projects**', icon=':material/construction:')`,
 "pages/page1.py": `import streamlit as st
 
 st.set_option("client.showSidebarNavigation", False)
