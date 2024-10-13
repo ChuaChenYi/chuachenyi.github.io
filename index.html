@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Hello World</title>
+    <title>stlite app</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@stlite/mountable@0.69.2/build/stlite.css"
@@ -24,7 +24,25 @@ stlite.mount(
     files: {
 "streamlit_app.py": `import streamlit as st
 
-st.title("Hello World!")
+import numpy as np
+import time
+
+st.title("Chua Chen Yi")
+
+# Write Stream Test
+LOREM_IPSUM = """
+Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+"""
+
+def stream_data(text):
+    for word in text.split(" "):
+        yield word + " "
+        time.sleep(0.05)
+        
+st.write_stream(stream_data(LOREM_IPSUM))
+
 `,
 
 },
