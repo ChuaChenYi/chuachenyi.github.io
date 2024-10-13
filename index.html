@@ -23,15 +23,17 @@ stlite.mount(
     entrypoint: "streamlit_app.py",
     files: {
 "streamlit_app.py": `import streamlit as st
-
-import numpy as np
 import time
 
-st.title("Chua Chen Yi")
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Home")
+
+st.title("Main Page")
+st.sidebar.page_link('pages/page1.py', label='Link To Page 1')
 
 # Write Stream Test
 LOREM_IPSUM = """
-Lorem ipsum dolor sit amet, **consectetur adipiscing** elit, sed do eiusmod tempor
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 """
@@ -40,10 +42,17 @@ def stream_data(text):
     for word in text.split(" "):
         yield word + " "
         time.sleep(0.05)
-        
+
 st.write_stream(stream_data(LOREM_IPSUM))
 
 `,
+"pages/page1.py": `import streamlit as st
+
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Page 1")
+
+st.title("This is page 1")
+st.sidebar.page_link('streamlit_app.py', label='Custom Link To Home')`,
 
 },
   },
