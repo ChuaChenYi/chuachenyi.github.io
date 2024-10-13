@@ -24,7 +24,9 @@ stlite.mount(
     files: {
 "streamlit_app.py": `import streamlit as st
 
-st.title("404")
+st.title("Sorry! Gotta 404 you!")
+st.caption("Due to the way Stlite works, every page is served through the landing page, so this page doesn't technically exist")
+st.link_button("Back to Homepage", "https://chuachenyi.github.io")
 `,
 
 },
