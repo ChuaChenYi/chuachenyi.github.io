@@ -25,6 +25,8 @@ stlite.mount(
 "streamlit_app.py": `import streamlit as st
 import time
 
+DELAY = 0.35
+
 # Webpage Setup
 st.set_option("client.showSidebarNavigation", False)
 st.set_page_config(page_title="Home")
@@ -33,31 +35,51 @@ st.set_page_config(page_title="Home")
 st.sidebar.caption("### Navigation")
 st.sidebar.page_link('streamlit_app.py', label='**Home**')
 st.sidebar.page_link('pages/page1.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### Personal Projects")
 st.sidebar.page_link('pages/page1.py', label='Link To Page 1')
 
-# Webpage Content Start
-st.title("Hello!")
-
-# Write Stream Test
-LOREM_IPSUM = """
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+MESSAGE = """
+Nice to see you here! Within this site, you'll find what I've been up to since 2015.
+Its primarily just a convenient way to showcase some work and school related stuff, plus a couple of side projects.
+Thanks for stopping by!
 """
 
-def stream_data(text):
+# Functions
+def stream_words(text):
     for word in text.split(" "):
         yield word + " "
-        time.sleep(0.03)
+        time.sleep(0.055)
 
-st.write_stream(stream_data(LOREM_IPSUM))
+def stream_letters(text, delay):
+    for word in text:
+        yield word
+        time.sleep(delay)
+
+def stream_header(text):
+    yield "# **"
+    for word in text:
+        yield word
+        time.sleep(0.1)
+    yield "**"
+
+# Webpage Content Start
+st.write_stream(stream_header("HELLO!"))
+time.sleep(DELAY)
+st.write_stream(stream_words(MESSAGE))
+time.sleep(DELAY)
+st.write_stream(stream_letters("\\\\- ChenYi", 0.05))
 
 # Links
-st.write("#### ")
+st.write("# ")
+time.sleep(DELAY)
 st.caption("#### Quick Links")
+time.sleep(DELAY)
 st.page_link("pages/page1.py", label='**Resume**', icon=':material/description:')
-st.page_link("pages/page1.py", label='**Personal Projects**', icon=':material/construction:')`,
+time.sleep(DELAY)
+st.page_link("pages/page1.py", label='**Personal Projects**', icon=':material/construction:')
+time.sleep(DELAY)
+st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/page1.py": `import streamlit as st
 
 st.set_option("client.showSidebarNavigation", False)
@@ -65,6 +87,9 @@ st.set_page_config(page_title="Page 1")
 
 st.title("This is page 1")
 st.sidebar.page_link('streamlit_app.py', label='Custom Link To Home')`,
+"pages/contact.py": `import streamlit as st
+
+st.header("Contact")`,
 
 },
   },
