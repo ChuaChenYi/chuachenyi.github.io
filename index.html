@@ -35,11 +35,11 @@ st.set_option("client.showSidebarNavigation", False)
 st.set_page_config(page_title="ChenYi")
 
 # Sidebar Setup
-st.sidebar.caption("### Navigation")
+st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### Personal Projects")
+st.sidebar.caption("### :blue[Personal Projects]")
 st.sidebar.page_link('pages/resume.py', label='Placeholder')
 
 MESSAGE = """
@@ -94,11 +94,11 @@ st.set_option("client.showSidebarNavigation", False)
 st.set_page_config(page_title="ChenYi")
 
 # Sidebar Setup
-st.sidebar.caption("### Navigation")
+st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### Personal Projects")
+st.sidebar.caption("### :blue[Personal Projects]")
 st.sidebar.page_link('pages/resume.py', label='Placeholder')
 
 MESSAGE = """
@@ -124,15 +124,47 @@ st.set_option("client.showSidebarNavigation", False)
 st.set_page_config(page_title="Resume")
 
 # Sidebar Setup
-st.sidebar.caption("### Navigation")
+st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### Personal Projects")
+st.sidebar.caption("### :blue[Personal Projects]")
 st.sidebar.page_link('pages/resume.py', label='Placeholder')
 
+# Webpage Content Start
 
-st.title("This is resume")`,
+# Header
+st.write("# Chua Chen Yi\\n ##### **2nd-Year Undergraduate at the Singapore Institute of Technology**")
+st.divider()
+
+# Work Experience
+st.write("## Work Experience")
+
+with st.container(border=True):
+    st.markdown("### Embedded Systems Engineer")
+    st.caption(":material/pin_drop: **Bugg Design & Services/The Propz Company** :material/calendar_today: **OCT/2021 - FEB/2023**")
+    st.markdown("Responsible for overseeing all aspects of electronics integration and design, \\
+                including microcontrollers, sensors, and PCBs, into new or existing products, \\
+                in addition to CAD and prototyping using additive manufacturing.")
+
+with st.container(border=True):
+    st.markdown("### Assistant Engineer")
+    st.caption(":material/pin_drop: **KISTAR Pte Ltd** :material/calendar_today: **JAN/2022 - MAR/2022**")
+    st.markdown("Assist in the installation and commissioning of sensor packages onboard container gantry \\
+                cranes at Pasir Panjang terminal")
+
+with st.container(border=True):
+    st.markdown("### Assistant Engineer")
+    st.caption(":material/pin_drop: **ST Electronics** :material/calendar_today: **MAR/2017 - AUG/2017**")
+    st.markdown("Installation and maintenance of electronic upgrade packages on government vehicles. \\
+                Logistical and administrative support for on-site engineers.")
+
+
+# Education
+st.write("## Education")
+
+
+`,
 
 },
   },
