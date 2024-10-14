@@ -87,7 +87,7 @@ st.caption("### Quick Links")
 time.sleep(SHORT)
 st.page_link("pages/resume.py", label='**Resume**', icon=':material/description:')
 time.sleep(SHORT)
-st.page_link("pages/resume.py", label='**Projects**', icon=':material/construction:')
+st.page_link("pages/project_1.py", label='**Projects**', icon=':material/construction:')
 time.sleep(SHORT)
 st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/contact.py": `import streamlit as st
@@ -116,7 +116,7 @@ st.divider()
 # Work Experience
 st.metric(label="Email", value='contact@84843903.xyz')
 st.metric(label="Phone", value='8484 3903')
-st.metric(label="LinkedIn", value='@chuachenyi')`,
+st.metric(label="Social Media", value='@chuachenyi')`,
 "pages/home.py": `import streamlit as st
 
 # Homepage with all animations removed
@@ -152,7 +152,7 @@ st.write("\\\\- ChenYi")
 st.write("### ")
 st.caption("### Quick Links")
 st.page_link("pages/resume.py", label='**Resume**', icon=':material/description:')
-st.page_link("pages/resume.py", label='**Projects**', icon=':material/construction:')
+st.page_link("pages/project_1.py", label='**Projects**', icon=':material/construction:')
 st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/resume.py": `import streamlit as st
 
@@ -283,7 +283,7 @@ with st.container(border=True):
 
 st.write("##### ")
 
-st.page_link("https://raw.githubusercontent.com/ExpiredTapWater/AAI3001-Small-Project/refs/heads/main/kaggle.png", \\
+st.page_link("https://google.com", \\
             label="Download PDF", icon=":material/download:")
 
 
@@ -309,7 +309,7 @@ st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@Exp
 # Webpage Content Start
 
 # Header
-st.write("# Bambu Lab Vented Riser Project\\n ##### **A purpose built, all-in-one riser for a typical Singaporean situation**")
+st.write("# Bambu Lab Vented Riser Project\\n ##### **A purpose built, all-in-one riser**")
 
 # Cover Images
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Interior", "Top", "Side", "Hose", "Rear", "CAD"])
@@ -325,11 +325,11 @@ st.write("##### ")
 
 # Project Introduction
 st.subheader("Overview", divider="grey")
-st.markdown("You want to print ABS, but it stinks, so you need to exhaust the air. But the rear exhaust fan is pathetic, and moves \\
-            too little air. You want to move the printer elsewhere, but you can't, your room is just too small. So you're stuck \\
+st.markdown("You want to print ABS, but it stinks, so you need to exhaust the air. But the rear exhaust fan is too small, and moves \\
+            too little air. You need to move the printer elsewhere, but you can't, there's just no space around the house. So you're stuck \\
             printing PLA and PETG until you find a solution, or make one.")
-st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. [Extra internal cameras](project_2.py), \\
-            [custom AI fault detection, Homekit integration](project_3.py), RF remotes, etc.")
+st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. [Extra internal cameras](project_2), \\
+            [custom AI fault detection, Homekit integration](project_3), RF remotes, etc.")
 
 st.subheader("Details", divider="grey")
 st.markdown("""
