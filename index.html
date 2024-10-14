@@ -39,14 +39,15 @@ st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### :blue[Personal Projects]")
-st.sidebar.page_link('pages/resume.py', label='Placeholder')
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 
-MESSAGE = """
+MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
-Its primarily just a convenient way to showcase some work and school related stuff, plus a couple of side projects.
-Thanks for stopping by!
+Its primarily just a convenient way to showcase some work and school related stuff, plus a couple of fun hobbyist projects.
 """
+
+MESSAGE_2 = "Thanks for stopping by!"
 
 # Functions
 def stream_words(text):
@@ -69,7 +70,9 @@ def stream_header(text):
 # Webpage Content Start
 st.write_stream(stream_header("HELLO!"))
 time.sleep(DELAY)
-st.write_stream(stream_words(MESSAGE))
+st.write_stream(stream_words(MESSAGE_1))
+time.sleep(SHORT)
+st.write_stream(stream_words(MESSAGE_2))
 time.sleep(DELAY)
 st.write_stream(stream_letters("\\\\- ChenYi", 0.05))
 
@@ -80,14 +83,21 @@ st.caption("### Quick Links")
 time.sleep(SHORT)
 st.page_link("pages/resume.py", label='**Resume**', icon=':material/description:')
 time.sleep(SHORT)
-st.page_link("pages/resume.py", label='**Personal Projects**', icon=':material/construction:')
+st.page_link("pages/resume.py", label='**Projects**', icon=':material/construction:')
 time.sleep(SHORT)
 st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/contact.py": `import streamlit as st
 
-st.header("Contact")`,
+st.header("Contact")
+
+# Sidebar Setup
+st.sidebar.caption("### :blue[Navigation]")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')`,
 "pages/home.py": `import streamlit as st
-import time
 
 # Homepage with all animations removed
 st.set_option("client.showSidebarNavigation", False)
@@ -98,25 +108,27 @@ st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### :blue[Personal Projects]")
-st.sidebar.page_link('pages/resume.py', label='Placeholder')
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 
-MESSAGE = """
+MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
-Its primarily just a convenient way to showcase some work and school related stuff, plus a couple of side projects.
-Thanks for stopping by!
+Its primarily just a convenient way to showcase some work and school related stuff, plus a couple of fun hobbyist projects.
 """
 
+MESSAGE_2 = "Thanks for stopping by!"
+
 # Webpage Content Start
-st.write("# **HELLO!**")
-st.write(MESSAGE)
+st.header("HELLO!")
+st.write(MESSAGE_1)
+st.write(MESSAGE_2)
 st.write("\\\\- ChenYi")
 
 # Links
 st.write("### ")
 st.caption("### Quick Links")
 st.page_link("pages/resume.py", label='**Resume**', icon=':material/description:')
-st.page_link("pages/resume.py", label='**Personal Projects**', icon=':material/construction:')
+st.page_link("pages/resume.py", label='**Projects**', icon=':material/construction:')
 st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/resume.py": `import streamlit as st
 
@@ -128,8 +140,8 @@ st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### :blue[Personal Projects]")
-st.sidebar.page_link('pages/resume.py', label='Placeholder')
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 
 # Webpage Content Start
 
@@ -248,6 +260,53 @@ st.page_link("https://raw.githubusercontent.com/ExpiredTapWater/AAI3001-Small-Pr
 
 
 st.write("### ")`,
+"pages/project_1.py": `import streamlit as st
+
+# X1C Riser Project
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="X1C Riser Project", initial_sidebar_state="collapsed")
+
+# Sidebar Setup
+st.sidebar.caption("### :blue[Navigation]")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+
+# Webpage Content Start
+
+# Header
+st.write("# Bambu Lab Vented Riser Project\\n ##### **A purpose built, all-in-one riser for a typical Singaporean situation**")
+
+# Cover Images
+tab1, tab2, tab3 = st.tabs(["Image", "Image", "Image"])
+with tab1:
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_3.JPG")
+
+with tab2:
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
+
+with tab3:
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
+
+
+st.write("##### ")
+
+# Project Introduction
+st.subheader("Preface", divider="grey")
+st.markdown("You want to print ABS, but it stinks, so you need to exhaust the air. But the rear exhaust fan is pathetic, and moves \\
+            too little air. You want to move the printer elsewhere, but you can't, your room is just too small. So you're stuck \\
+            printing PLA and PETG until you find a solution, or make one.")
+st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. Extra internal cameras, \\
+            custom AI fault detection, Homekit integration, RF remotes, etc.")
+
+# 
+st.subheader("What it does", divider="grey")
+st.markdown("A riser simply lifts the top glass panel off by a few mm, most commonly used to then mount some extra lighting\\
+             to brighten up the interier. But I also needed to to double as a mounting point for some extra cameras, provide power,\\
+             and most importantly a way to mount a larger fan to exhaust the fumes specifically from the front left corner nearest to\\
+             my window")`,
 
 },
   },
@@ -256,5 +315,5 @@ st.write("### ")`,
 
     </script>
   </body>
-  <!-- Generated from stlite sharing (https://edit.share.stlite.net/), and the source version is bb4057d685176ec3792f9ff26623c704c38df8d4 -->
+  <!-- Generated from stlite sharing (https://edit.share.stlite.net/), and the source version is 1c7fd672b4bc605af767dd28267c3444e52f0aea -->
 </html>
