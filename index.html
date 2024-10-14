@@ -42,6 +42,7 @@ st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
 
 MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -98,7 +99,8 @@ st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
-st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')`,
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')`,
 "pages/home.py": `import streamlit as st
 
 # Homepage with all animations removed
@@ -113,6 +115,7 @@ st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
 
 MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -146,6 +149,7 @@ st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
 
 # Webpage Content Start
 
@@ -278,6 +282,7 @@ st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
 
 # Webpage Content Start
 
@@ -332,6 +337,7 @@ st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
 
 # Webpage Content Start
 
@@ -339,9 +345,10 @@ st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.write("# Tapo C100/C110 Reshell\\n ##### **A versatile replacment case for the Tapo C1xx seires of IP cameras**")
 
 # Cover Images
-tab1, tab2 = st.tabs(["C110", "C100"])
+tab1, tab2, tab3 = st.tabs(["C110", "C100", "HomeKit"])
 tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_19.JPG")
 tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_15.JPG")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_20.JPG")
 
 st.write("##### ")
 
@@ -358,13 +365,78 @@ st.markdown("""
             - Once disassembled, its easy to shim the camera sensor to adjust focus
             """)
 
-tab1, tab2, tab3, tab4 = st.tabs(["Parts", "Battery Mod", "PCB", "Magnetic Mounting"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Parts", "Battery Mod", "PCB", "Magnetic Mounting", "Extrusion Mounting"])
 tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_18.JPG")
 tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_17.JPG")
 tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_14.jpg")
 tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_16.JPG")
+tab5.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_13.JPG")
 
 st.write("##### ")`,
+"pages/project_3.py": `import streamlit as st
+
+# Spaghetti Detection
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Spaghetti Detection", initial_sidebar_state="collapsed")
+
+# Sidebar Setup
+st.sidebar.caption("### :blue[Navigation]")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+
+# Webpage Content Start
+
+# Header
+st.write("# HomeKit Integrated AI Spagehetti Detection\\n ##### **3D printing failure detection using YOLOv8 and OpenCV through Homebridge or Home Assistant**")
+
+# Project Introduction
+st.subheader("Overview", divider="grey")
+st.markdown("After spending a decent sum on a Bambu printer, you'll think that its fancy AI camera will be able to detect spaghetti failures\\
+            and pause the print, giving you the peace of mind when you're outside, until you come back and see this:")
+st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_21.jpg",
+        caption = "Picture is not mine, but you get the idea of what I saw (source: @jsnieto)")
+st.markdown("This project is a complete replacement of that system.")
+
+# Model Details
+st.subheader("Model", divider="grey")
+st.markdown("The model used was YOLOv8, and it was fine tuned on my own set of labled training images from multiple perspectives. Hyperparater tuning was done,\\
+            which resulted in a noticiable increase in accuracy, and the model's ability to better discern between multiple and\\
+            single instances of failure.")
+
+# Diagrams
+tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "Results 1", "Results 2", "Results 3"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_5.jpg")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_6.jpg")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_7.jpg")
+tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_8.jpg")
+
+# Project Details
+st.subheader("Implementation", divider="grey")
+st.markdown("In short, A pipeline of various existing softwares and libraries to put an live AI camera feed on my iPhone.\\
+            an extremly neat feature of the having a HomePod is it allows you to use Apple's servers as a relay service instead of having\\
+            to VPN back home every single time")
+
+# Diagrams
+tab1, tab2, tab3 = st.tabs(["High-Level", "Overview", "HomeKit"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_2.jpg")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_3.jpg")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/slide_4.jpg")
+
+# Results
+st.subheader("Results", divider="grey")
+st.markdown("Simply launch the Apple Home app and load the AI camera feed, all streamed live without any VPN required.\\
+            Should an error occur, the ntfy library will send a push notification. You can either kill the printer via\\
+            a HomeKit smart plug, or MQTT in Home Assistant using the Bambu plugin")
+
+# Diagrams
+tab1, tab2= st.tabs(["iPhone", "Home Assistant"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_22.jpg")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_23.jpg")`,
 
 },
   },
