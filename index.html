@@ -301,9 +301,8 @@ st.subheader("Overview", divider="grey")
 st.markdown("You want to print ABS, but it stinks, so you need to exhaust the air. But the rear exhaust fan is pathetic, and moves \\
             too little air. You want to move the printer elsewhere, but you can't, your room is just too small. So you're stuck \\
             printing PLA and PETG until you find a solution, or make one.")
-st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. Extra internal cameras, \\
+st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. [Extra internal cameras](project_2.py), \\
             custom AI fault detection, Homekit integration, RF remotes, etc.")
-st.markdown("[Test](project_2.py)")
 
 st.subheader("Details", divider="grey")
 st.markdown("""
@@ -340,14 +339,9 @@ st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.write("# Tapo C100/C110 Reshell\\n ##### **A versatile replacment case for the Tapo C1xx seires of IP cameras**")
 
 # Cover Images
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Interior", "Top", "Side", "Hose", "Rear", "CAD"])
-
-tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_3.JPG")
-tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_4.jpg")
-tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_7.JPG")
-tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
-tab5.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_11.JPG")
-tab6.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_12.jpg")
+tab1, tab2 = st.tabs(["C110", "C100"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_19.JPG")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_15.JPG")
 
 st.write("##### ")
 
@@ -364,10 +358,11 @@ st.markdown("""
             - Once disassembled, its easy to shim the camera sensor to adjust focus
             """)
 
-tab1, tab2, tab3 = st.tabs(["Cameras", "Front View", "Rear View"])
-tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_8.JPG")
-tab2.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_9.jpg?raw=true")
-tab3.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_10.jpg?raw=true")
+tab1, tab2, tab3, tab4 = st.tabs(["Parts", "Battery Mod", "PCB", "Magnetic Mounting"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_18.JPG")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_17.JPG")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_14.jpg")
+tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_16.JPG")
 
 st.write("##### ")`,
 
