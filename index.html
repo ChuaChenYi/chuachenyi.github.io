@@ -41,6 +41,7 @@ st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 
 MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -96,7 +97,8 @@ st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
-st.sidebar.page_link('pages/project_1.py', label='X1C Riser')`,
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')`,
 "pages/home.py": `import streamlit as st
 
 # Homepage with all animations removed
@@ -110,6 +112,7 @@ st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 
 MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -142,6 +145,7 @@ st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 
 # Webpage Content Start
 
@@ -273,6 +277,7 @@ st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 
 # Webpage Content Start
 
@@ -287,7 +292,7 @@ tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/re
 tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_7.JPG")
 tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
 tab5.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_11.JPG")
-tab6.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_12.JPG")
+tab6.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_12.jpg")
 
 st.write("##### ")
 
@@ -298,12 +303,65 @@ st.markdown("You want to print ABS, but it stinks, so you need to exhaust the ai
             printing PLA and PETG until you find a solution, or make one.")
 st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. Extra internal cameras, \\
             custom AI fault detection, Homekit integration, RF remotes, etc.")
+st.markdown("[Test](pages/project_2.py)")
 
-st.subheader("Features", divider="grey")
+st.subheader("Details", divider="grey")
 st.markdown("""
             - Dual cameras covering hard to reach spots like the purge chute.
+            - COB LEDs with wireless control
             - 36W exhaust fan with a magnetic hose interface.
             - Power supply for powering cameras, lighting, fans and remotes.
+            """)
+
+tab1, tab2, tab3 = st.tabs(["Cameras", "Front View", "Rear View"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_8.JPG")
+tab2.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_9.jpg?raw=true")
+tab3.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_10.jpg?raw=true")
+
+st.write("##### ")`,
+"pages/project_2.py": `import streamlit as st
+
+# Tapo Camera Project
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Tapo Camera", initial_sidebar_state="collapsed")
+
+# Sidebar Setup
+st.sidebar.caption("### :blue[Navigation]")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### :blue[Projects]")
+st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
+st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
+
+# Webpage Content Start
+
+# Header
+st.write("# Tapo C100/C110 Reshell\\n ##### **A versatile replacment case for the Tapo C1xx seires of IP cameras**")
+
+# Cover Images
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Interior", "Top", "Side", "Hose", "Rear", "CAD"])
+
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_3.JPG")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_4.jpg")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_7.JPG")
+tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
+tab5.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_11.JPG")
+tab6.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_12.jpg")
+
+st.write("##### ")
+
+# Project Introduction
+st.subheader("Overview", divider="grey")
+st.markdown("Extremly versatile, cheap and modular IP cameras. They support RTSP allowing it to be integrated with many different camera softwares like\\
+            Scrypted and Home Assistant, plus Python libraries like OpenCV. Its IR LEDs are PCB mounted and can be easily removed to expose a 6-pin header,\\
+            one of which can be remotely controled by toggling night mode from their app. The only glaring issue is the lack of mounting options, an easy fix.")
+
+st.subheader("Details", divider="grey")
+st.markdown("""
+            - Provides magnetic or screw mount via a single M3 threaded insert.
+            - Easily integrates with other projects
+            - Once disassembled, its easy to shim the camera sensor to adjust focus
             """)
 
 tab1, tab2, tab3 = st.tabs(["Cameras", "Front View", "Rear View"])
@@ -320,5 +378,5 @@ st.write("##### ")`,
 
     </script>
   </body>
-  <!-- Generated from stlite sharing (https://edit.share.stlite.net/), and the source version is 1c7fd672b4bc605af767dd28267c3444e52f0aea -->
+  <!-- Generated from stlite sharing (https://edit.share.stlite.net/), and the source version is 0b3f267516d5b54620fac2800e85418958686e01 -->
 </html>
