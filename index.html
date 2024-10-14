@@ -135,10 +135,10 @@ st.sidebar.page_link('pages/resume.py', label='Placeholder')
 
 # Header
 st.write("# Chua Chen Yi\\n ##### **2nd-Year Undergraduate at the Singapore Institute of Technology**")
-st.divider()
+st.write("##### ")
 
 # Work Experience
-st.write("## Work Experience")
+st.subheader("Work Experience", divider="grey")
 
 with st.container(border=True):
     st.markdown("### Embedded Systems Engineer")
@@ -149,6 +149,7 @@ with st.container(border=True):
                 - Identify and source for required electronics components such as micro-controllers and sensors.
                 - Fabricate solutions, using methods such as CAD, additive manufacturing, laser cutting and PCB design.
                 - Assist in ad-hoc software related tasks, including writing of automation scripts and data analysis.
+                - Fast time-to-market directly secured several contracts otherwise lost.
                 """)
 
 with st.container(border=True):
@@ -174,8 +175,44 @@ with st.container(border=True):
             """)
 
 
+st.write("##### ")
+
 # Education
-st.write("## Education")
+st.subheader("Education", divider="grey")
+
+with st.container(border=True):
+    st.markdown("### BSc (Hons) in Applied Artificial Intelligence")
+    st.caption(":material/pin_drop: **Singapore Institute of Technology** :material/calendar_today: **AUG/2023 - :blue[Ongoing]**")
+    st.caption("*Estimated completion in AUG/2025*")
+
+with st.container(border=True):
+    st.markdown("### Specialist Diploma in Data Science (Vision and language Analytics)")
+    st.caption(":material/pin_drop: **Singapore Polytechnic** :material/calendar_today: **APR/2023 - SEP/2023**")
+    st.caption("**CGPA: 4.0/4.0**")
+
+with st.container(border=True):
+    st.markdown("### Specialist Diploma in Data Science (Artificial Intelligence)")
+    st.caption(":material/pin_drop: **Singapore Polytechnic** :material/calendar_today: **APR/2022 - MAR/2023**")
+
+with st.container(border=True):
+    st.markdown("### Bachelor of Science in Physics / Applied Physics")
+    st.caption(":material/pin_drop: **Nanyang Technological University**\\
+                 :material/calendar_today: **AUG/2020 - MAY/2021**")
+
+    with st.expander("**:red-background[Withdrew from programme]**"):
+        st.write('''
+            TODO
+        ''')
+
+with st.container(border=True):
+    st.markdown("### Diploma in Engineering with Business")
+    st.caption(":material/pin_drop: **Singapore Polytechnic** :material/calendar_today: **APR/2015 - MAR/2018**")
+
+st.write("##### ")
+
+# Certifications
+st.subheader("Certifications", divider="grey")
+
 
 
 `,
