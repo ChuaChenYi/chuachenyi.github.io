@@ -280,33 +280,45 @@ st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.write("# Bambu Lab Vented Riser Project\\n ##### **A purpose built, all-in-one riser for a typical Singaporean situation**")
 
 # Cover Images
-tab1, tab2, tab3 = st.tabs(["Image", "Image", "Image"])
+tab1, tab2, tab3, tab4 = st.tabs(["Interior", "Top", "Side", "Hose"])
 with tab1:
     st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_3.JPG")
 
 with tab2:
-    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_4.jpg")
 
 with tab3:
-    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_7.JPG")
 
+with tab4:
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_1.JPG")
 
 st.write("##### ")
 
 # Project Introduction
-st.subheader("Preface", divider="grey")
+st.subheader("Overview", divider="grey")
 st.markdown("You want to print ABS, but it stinks, so you need to exhaust the air. But the rear exhaust fan is pathetic, and moves \\
             too little air. You want to move the printer elsewhere, but you can't, your room is just too small. So you're stuck \\
             printing PLA and PETG until you find a solution, or make one.")
 st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. Extra internal cameras, \\
             custom AI fault detection, Homekit integration, RF remotes, etc.")
 
-# 
-st.subheader("What it does", divider="grey")
-st.markdown("A riser simply lifts the top glass panel off by a few mm, most commonly used to then mount some extra lighting\\
-             to brighten up the interier. But I also needed to to double as a mounting point for some extra cameras, provide power,\\
-             and most importantly a way to mount a larger fan to exhaust the fumes specifically from the front left corner nearest to\\
-             my window")`,
+st.subheader("Features", divider="grey")
+st.markdown("""
+            - Dual cameras covering hard to reach spots like the purge chute.
+            - 36W exhaust fan with a magnetic hose interface.
+            - Power supply for powering cameras, lighting, fans and remotes.
+            """)
+
+tab1, tab2, tab3 = st.tabs(["Cameras", "Front View", "Rear View"])
+with tab1:
+    st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_8.JPG")
+with tab2:
+    st.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_9.jpg?raw=true")
+with tab3:
+    st.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_10.jpg?raw=true")
+
+st.write("##### ")`,
 
 },
   },
