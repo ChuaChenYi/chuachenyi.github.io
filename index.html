@@ -43,6 +43,8 @@ st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
 
 MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -90,7 +92,8 @@ time.sleep(SHORT)
 st.page_link("pages/contact.py", label='**Contact**', icon=':material/call:')`,
 "pages/contact.py": `import streamlit as st
 
-st.header("Contact")
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Contact", initial_sidebar_state="collapsed")
 
 # Sidebar Setup
 st.sidebar.caption("### :blue[Navigation]")
@@ -100,7 +103,20 @@ st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
 st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
-st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')`,
+st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
+
+# Webpage Content Start
+
+# Header
+st.header("Contact")
+st.divider()
+
+# Work Experience
+st.metric(label="Email", value='contact@84843903.xyz')
+st.metric(label="Phone", value='8484 3903')
+st.metric(label="LinkedIn", value='@chuachenyi')`,
 "pages/home.py": `import streamlit as st
 
 # Homepage with all animations removed
@@ -116,6 +132,8 @@ st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
 
 MESSAGE_1 = """
 Nice to see you here! Within this site, you'll find what I've been up to since 2015.
@@ -150,6 +168,8 @@ st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
 
 # Webpage Content Start
 
@@ -283,6 +303,8 @@ st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
 
 # Webpage Content Start
 
@@ -307,7 +329,7 @@ st.markdown("You want to print ABS, but it stinks, so you need to exhaust the ai
             too little air. You want to move the printer elsewhere, but you can't, your room is just too small. So you're stuck \\
             printing PLA and PETG until you find a solution, or make one.")
 st.markdown("This project lays the groundwork to build all sorts of other fun stuff on top of my current 3D Printer. [Extra internal cameras](project_2.py), \\
-            custom AI fault detection, Homekit integration, RF remotes, etc.")
+            [custom AI fault detection, Homekit integration](project_3.py), RF remotes, etc.")
 
 st.subheader("Details", divider="grey")
 st.markdown("""
@@ -321,6 +343,12 @@ tab1, tab2, tab3 = st.tabs(["Cameras", "Front View", "Rear View"])
 tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_1/image_8.JPG")
 tab2.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_9.jpg?raw=true")
 tab3.image("https://github.com/ChuaChenYi/chuachenyi.github.io/blob/main/assets/project_1/image_10.jpg?raw=true")
+
+st.write("##### ")
+
+# Download Links
+st.page_link("https://makerworld.com/en/models/135625#profileId-147427", \\
+            label="Model Files", icon=":material/download:")
 
 st.write("##### ")`,
 "pages/project_2.py": `import streamlit as st
@@ -338,6 +366,8 @@ st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
 
 # Webpage Content Start
 
@@ -372,6 +402,12 @@ tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/re
 tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_16.JPG")
 tab5.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_13.JPG")
 
+st.write("##### ")
+
+# Download Links
+st.page_link("https://makerworld.com/en/models/137346#profileId-149453", \\
+            label="Model Files", icon=":material/download:")
+
 st.write("##### ")`,
 "pages/project_3.py": `import streamlit as st
 
@@ -388,6 +424,8 @@ st.sidebar.caption("### :blue[Projects]")
 st.sidebar.page_link('pages/project_1.py', label='X1C Riser')
 st.sidebar.page_link('pages/project_2.py', label='Tapo Camera')
 st.sidebar.page_link('pages/project_3.py', label='Spaghetti Detection')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
 
 # Webpage Content Start
 
@@ -436,7 +474,9 @@ st.markdown("Simply launch the Apple Home app and load the AI camera feed, all s
 # Diagrams
 tab1, tab2= st.tabs(["iPhone", "Home Assistant"])
 tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_22.jpg")
-tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_23.jpg")`,
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_23.jpg")
+
+st.write("##### ")`,
 
 },
   },
