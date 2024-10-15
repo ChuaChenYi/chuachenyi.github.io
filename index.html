@@ -491,12 +491,15 @@ tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/re
 st.subheader("Results", divider="grey")
 st.markdown("Simply launch the Apple Home app and load the AI camera feed, all streamed live without any VPN required.\\
             Should an error occur, the ntfy library will send a push notification. You can either kill the printer via\\
-            a HomeKit smart plug, or MQTT in Home Assistant using the Bambu plugin")
+            a HomeKit smart plug, or MQTT in Home Assistant using the Bambu plugin. \\n\\nAnother simple flask app pings the IP of\\
+            the printer, and hooks into the built in camera for a 4th viewpoint. This allows it to still be visible in Apple's\\
+            home app even if the printer is offline")
 
 # Diagrams
-tab1, tab2= st.tabs(["iPhone", "Home Assistant"])
+tab1, tab2, tab3 = st.tabs(["iPhone", "HomeKit", "Home Assistant"])
 tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_22.jpg")
-tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_23.jpg")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_24.jpg")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_23.jpg")
 
 st.write("##### ")`,
 "pages/project_4.py": `import streamlit as st
