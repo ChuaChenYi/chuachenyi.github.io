@@ -39,7 +39,10 @@ st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### :blue[Projects]")
+st.sidebar.caption("### :blue[Professional Projects]")
+st.sidebar.page_link('pages/project_4.py', label='**Project Green**')
+st.sidebar.page_link('pages/project_5.py', label='**Design Orchard**')
+st.sidebar.caption("### :blue[Personal Projects]")
 st.sidebar.page_link('pages/project_1.py', label='**X1C Riser**')
 st.sidebar.page_link('pages/project_2.py', label='**Tapo Camera**')
 st.sidebar.page_link('pages/project_3.py', label='**Spaghetti Detection**')
@@ -128,7 +131,10 @@ st.sidebar.caption("### :blue[Navigation]")
 st.sidebar.page_link('pages/home.py', label='**Home**')
 st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
 st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
-st.sidebar.caption("### :blue[Projects]")
+st.sidebar.caption("### :blue[Professional Projects]")
+st.sidebar.page_link('pages/project_4.py', label='**Project Green**')
+st.sidebar.page_link('pages/project_5.py', label='**Design Orchard**')
+st.sidebar.caption("### :blue[Personal Projects]")
 st.sidebar.page_link('pages/project_1.py', label='**X1C Riser**')
 st.sidebar.page_link('pages/project_2.py', label='**Tapo Camera**')
 st.sidebar.page_link('pages/project_3.py', label='**Spaghetti Detection**')
@@ -372,13 +378,14 @@ st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@Exp
 # Webpage Content Start
 
 # Header
-st.write("# Tapo C100/C110 Reshell\\n ##### **A versatile replacment case for the Tapo C1xx seires of IP cameras**")
+st.write("# Tapo C100/C110 Reshell\\n ##### **A versatile replacement case for the Tapo C1xx seires of IP cameras**")
 
 # Cover Images
-tab1, tab2, tab3 = st.tabs(["C110", "C100", "HomeKit"])
+tab1, tab2, tab3, tab4 = st.tabs(["C110", "C100", "HomeKit", "Comparison"])
 tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_19.JPG")
 tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_15.JPG")
-tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_20.JPG")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_20.jpg")
+tab4.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_2/image_21.JPG")
 
 st.write("##### ")
 
@@ -477,6 +484,103 @@ tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/re
 tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_3/image_23.jpg")
 
 st.write("##### ")`,
+"pages/project_4.py": `import streamlit as st
+
+# Webpage Setup
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Project Green", initial_sidebar_state="collapsed")
+
+# Sidebar Setup
+st.sidebar.caption("### :blue[Navigation]")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### :blue[Professional Projects]")
+st.sidebar.page_link('pages/project_4.py', label='**Project Green**')
+st.sidebar.page_link('pages/project_5.py', label='**Design Orchard**')
+st.sidebar.caption("### :blue[Personal Projects]")
+st.sidebar.page_link('pages/project_1.py', label='**X1C Riser**')
+st.sidebar.page_link('pages/project_2.py', label='**Tapo Camera**')
+st.sidebar.page_link('pages/project_3.py', label='**Spaghetti Detection**')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
+
+# Webpage Content Start
+
+# Header
+st.write("# Project Green @ Raffles City\\n ##### **Encouraging Community Action For Climate Change**")
+
+# Cover Images
+tab1, tab2 = st.tabs(["Cover", "Promotional Video"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/image_1.JPG")
+tab2.video("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/video.mp4")
+st.write("##### ")
+
+# Project Introduction
+st.subheader("Overview", divider="grey")
+st.markdown("Our task was to build the centrepiece for this event, a pedal-powered lighting attraction. While you'd generate electricty from the alternater without needing any electronics,\\
+            The effect wasn't as pronouced, and there was concerns that members of the public would overexert themselves. Hence the inclusion of some electronics to assist.")
+st.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/image_3.JPG")
+
+# Project Details
+st.subheader("Details", divider="grey")
+st.markdown("As time wasn't as tight, I designed a 'general purpose' PCB that I could reuse for future projects and for the use of screw terminals to secure the wires from the motion \\
+            of peddling. A stacked PCB design was used to hold a multi relay module in the event that we needed to control more lighting than intended.\\
+            While not really in the spirit of being green when the lights are hooked to mains power, this design allows us to vary the number of lights, and how easy it is to trigger them")
+tab1, tab2, tab3 = st.tabs(["Details", "PCB - Top", "PCB - Side"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/image_4.jpg")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/image_5.jpg")
+tab3.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/image_6.jpg")
+st.write("##### ")
+
+# Conclusion
+st.subheader("Results", divider="grey")
+st.markdown("Here is a video of it being tested, the effect looks much better in person than on camera.")
+st.video("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_4/video_2.mp4")
+st.write("##### ")
+`,
+"pages/project_5.py": `import streamlit as st
+
+# Webpage Setup
+st.set_option("client.showSidebarNavigation", False)
+st.set_page_config(page_title="Design Orchard", initial_sidebar_state="collapsed")
+
+# Sidebar Setup
+st.sidebar.caption("### :blue[Navigation]")
+st.sidebar.page_link('pages/home.py', label='**Home**')
+st.sidebar.page_link('pages/resume.py', label='**Resume**') #TODO
+st.sidebar.page_link('pages/contact.py', label='**Contact**') #TODO
+st.sidebar.caption("### :blue[Professional Projects]")
+st.sidebar.page_link('pages/project_4.py', label='**Project Green**')
+st.sidebar.page_link('pages/project_5.py', label='**Design Orchard**')
+st.sidebar.caption("### :blue[Personal Projects]")
+st.sidebar.page_link('pages/project_1.py', label='**X1C Riser**')
+st.sidebar.page_link('pages/project_2.py', label='**Tapo Camera**')
+st.sidebar.page_link('pages/project_3.py', label='**Spaghetti Detection**')
+st.sidebar.caption("### :blue[MakerWorld]")
+st.sidebar.page_link('https://makerworld.com/en/@expiredtapwater', label='**@ExpiredTapWater**')
+
+# Webpage Content Start
+
+# Header
+st.write("# Product Display @ Design Orchard\\n ##### **Adding vertical movement for a more dynamic product display**")
+
+# Cover Images
+tab1, tab2 = st.tabs(["Outside", "Inside"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_5/image_1.jpg")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_5/image_4.JPG")
+st.write("##### ")
+
+# Project Introduction
+st.subheader("Overview", divider="grey")
+st.markdown("A motorized winch system that hoists and lowers a cutout of a hot air ballon, the bottom of which products can\\
+            be hung under. Uses a time-of-flight sensor to 'home' the system each day after the power is turned off during closing \\
+            hours. Reuses multiple components from previous projects for cost and efficiency.")
+
+tab1, tab2 = st.tabs(["PCB", "Setup"])
+tab1.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_5/image_2.jpg",
+            caption = "Repurposed PCB from the Raffles City project, just with an added H-bridge for the motor")
+tab2.image("https://raw.githubusercontent.com/ChuaChenYi/chuachenyi.github.io/refs/heads/main/assets/project_5/image_3.jpg")`,
 
 },
   },
